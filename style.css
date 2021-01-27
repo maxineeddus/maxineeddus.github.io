@@ -365,46 +365,21 @@ template {
   color: #fdf8f0
 }
 
-@keyframes color-change {
-  0% {
-    color: #f80000
-  }
-  20% {
-    color: #ff4e10
-  }
-  40% {
-    color: #ecd500
-  }
-  60% {
-    color: #00cd6c
-  }
-  80% {
-    color: #0057eb
-  }
-  to {
-    color: #9f00b3
-  }
-}
-
-@keyframes background-color-change {
-  0% {
-    background-color: #f80000
-  }
-  20% {
-    background-color: #ff4e10
-  }
-  40% {
-    background-color: #ecd500
-  }
-  60% {
-    background-color: #00cd6c
-  }
-  80% {
-    background-color: #0057eb
-  }
-  to {
-    background-color: #9f00b3
-  }
+.link-block:hover,
+.shimmer {
+  display: inline-block;
+  background: #1f1f1f linear-gradient(90deg, #f80000, #ff4e10 20%, #ecd500 40%, #00cd6c 60%, #0057eb 80%, #9f00b3);
+  background-position: 0 top;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%
 }
 
 html {
@@ -473,7 +448,7 @@ a {
 
 .start .content {
   padding: 16px;
-  padding-top: 260px;
+  padding-top: 280px;
   box-sizing: border-box
 }
 
@@ -524,6 +499,16 @@ a {
   }
 }
 
+.text {
+  max-width: 282px
+}
+
+@media screen and (min-width:768px) {
+  .text {
+    max-width: none
+  }
+}
+
 .contact {
   padding: 0;
   font-weight: 600;
@@ -555,7 +540,9 @@ a {
   display: flex;
   margin-top: 40px;
   -ms-flex-direction: column;
-  flex-direction: column
+  flex-direction: column;
+  -ms-flex-align: start;
+  align-items: flex-start
 }
 
 @media screen and (min-width:768px) {
