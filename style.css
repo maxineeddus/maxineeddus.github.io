@@ -365,21 +365,23 @@ template {
   color: #fdf8f0
 }
 
-.link-block:hover,
-.shimmer {
-  display: inline-block;
-  background: #1f1f1f linear-gradient(90deg, #f80000, #ff4e10 20%, #ecd500 40%, #00cd6c 60%, #0057eb 80%, #9f00b3);
-  background-position: 0 top;
-  background-repeat: no-repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  background-size: 100% 100%;
-  -webkit-background-size: 100% 100%
+@media screen and (min-width:960px) {
+  .link-block:hover,
+  .shimmer {
+    display: inline-block;
+    background: #1f1f1f linear-gradient(90deg, #f80000, #ff4e10 20%, #ecd500 40%, #00cd6c 60%, #0057eb 80%, #9f00b3);
+    background-position: 0 top;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%
+  }
 }
 
 html {
@@ -500,7 +502,7 @@ a {
 }
 
 .text {
-  max-width: 282px
+  max-width: 280px
 }
 
 @media screen and (min-width:768px) {
